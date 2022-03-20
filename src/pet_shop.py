@@ -29,13 +29,6 @@ def get_pets_by_breed(pet_shop, breed_type):
             same_breed.append(pet)
     return same_breed
 
-# def get_pets_by_breed(pet_shop, breed_type):
-#     # breakpoint()
-#     pets = []
-#     for pet in pet_shop["pets"]:
-#         if breed_type in pet_shop["pets"][0]["breed"] == True:
-#             pets.append(pet)
-#             return len(pets)
 
 # def get_pets_by_breed(pet_shop, animal_breed):
     # num_of_breed = []
@@ -72,9 +65,16 @@ def remove_pet_by_name(pet_shop, pet_name):
     find_pet_by_name(pet_shop, pet_name)
     return pet 
 
-# def add_pet_to_stock(pet_shop, new_pet):
-#     for pet in pet_shop["pets"]:
-#         if pet["name"] != new_pet:
-#             pet_shop["pets"].append(pet)
-#     get_stock_count(pet_shop)
-#     return len(pet_shop["pet"])
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
+    get_stock_count(pet_shop)
+
+# def get_customer_cash(customers):
+#     for customer in customers["cash"]:
+#         if customer["cash"] == 1000:
+#             return customer["cash"]
+        
+        
+def get_customer_cash(customers):
+    return customers["cash"]
+
