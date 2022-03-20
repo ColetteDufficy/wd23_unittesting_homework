@@ -90,4 +90,23 @@ def customer_can_afford_pet(customer, new_pet):
         return True
     return False
 
-    # These are 'integration' tests so we want multiple asserts.
+# These are 'integration' tests so we want multiple asserts.
+def sell_pet_to_customer(pet_shop, pet_name, customer):
+    
+    # input_record_store["money"] += record_to_sell["price"]
+    # input_record_store["records"].remove(record_to_sell)   
+    
+    
+    # breakpoint()
+    find_pet_by_name(pet_shop, pet_name)
+    add_pet_to_customer(customer, pet_name)
+    get_customer_pet_count(customer)
+    get_pets_sold(pet_shop)
+    get_customer_cash(customer)
+    get_total_cash(pet_shop)
+
+
+    
+
+
+
