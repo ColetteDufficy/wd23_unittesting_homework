@@ -66,13 +66,15 @@ def find_pet_by_name(pet_shop, pet_name):
 
 
 def remove_pet_by_name(pet_shop, pet_name):
-    # breakpoint()
     for pet in pet_shop["pets"]:
         if pet["name"] == pet_name:
-            pet_shop["pets"].remove(pet_name)
+            pet_shop["pets"].remove(pet)
     find_pet_by_name(pet_shop, pet_name)
-    for pet in pet_shop["pets"]:
-        if pet["name"] == pet_name:
-            return pet 
-    
-    
+    return pet 
+
+# def add_pet_to_stock(pet_shop, new_pet):
+#     for pet in pet_shop["pets"]:
+#         if pet["name"] != new_pet:
+#             pet_shop["pets"].append(pet)
+#     get_stock_count(pet_shop)
+#     return len(pet_shop["pet"])
