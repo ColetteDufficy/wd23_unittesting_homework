@@ -62,7 +62,17 @@ def find_pet_by_name(pet_shop, pet_name):
     # breakpoint()
     for pet in pet_shop["pets"]:
         if pet["name"] == pet_name:
-            return pet  # ***** why does this return JUST a name????**** 
+            return pet  # ***** why does this return JUST a name, rather than the whole dict????**** 
 
 
-
+def remove_pet_by_name(pet_shop, pet_name):
+    # breakpoint()
+    for pet in pet_shop["pets"]:
+        if pet["name"] == pet_name:
+            pet_shop["pets"].remove(pet_name)
+    find_pet_by_name(pet_shop, pet_name)
+    for pet in pet_shop["pets"]:
+        if pet["name"] == pet_name:
+            return pet 
+    
+    
